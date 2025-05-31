@@ -30,7 +30,7 @@ def main():
                     print("QR Code detected:", data)
                     key_detected = data.lower()
                     # Send a keyboard event with the detected data
-                    if len(key_detected) == 2 and key_detected[0] == 'f':
+                    if key_detected in key_names:
                         pyautogui.press(key_detected)
                     
                     # Optionally, draw a bounding box around the QR code
